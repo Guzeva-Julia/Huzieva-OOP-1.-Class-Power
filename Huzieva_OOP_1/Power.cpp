@@ -3,20 +3,15 @@
 #include "Power.h"
 using namespace std;
 
-
-
-
-
 Kaloriinist Kaloriinist::Init(int f, float s)
 {
 	Kaloriinist tmp;
-	tmp.first = f; //калорійність 100 г продукту;
-	tmp.second = s; //маса продукту в кілограмах;
+	tmp.first = f; //РєР°Р»РѕСЂС–Р№РЅС–СЃС‚СЊ 100 Рі РїСЂРѕРґСѓРєС‚Сѓ;
+	tmp.second = s; //РјР°СЃР° РїСЂРѕРґСѓРєС‚Сѓ РІ РєС–Р»РѕРіСЂР°РјР°С…;
 	return tmp;
 }
 
-Kaloriinist Kaloriinist::Read() //метод введення з клавіатури, данні беруться з файлу Guzeva_OOP_1.cpp;
-{
+Kaloriinist Kaloriinist::Read() //РјРµС‚РѕРґ РІРІРµРґРµРЅРЅСЏ Р· РєР»Р°РІС–Р°С‚СѓСЂРё, РґР°РЅРЅС– Р±РµСЂСѓС‚СЊСЃСЏ Р· С„Р°Р№Р»Сѓ Guzeva_OOP_1.cpp;
 	Kaloriinist tmp;
 	cout << "first" << endl;
 	cin >> tmp.first;
@@ -28,14 +23,13 @@ Kaloriinist Kaloriinist::Read() //метод введення з клавіатури, данні беруться з 
 
 
 
-void Kaloriinist::Power() //метод обчислення загальної калорійності продукту;
+void Kaloriinist::Power() //РјРµС‚РѕРґ РѕР±С‡РёСЃР»РµРЅРЅСЏ Р·Р°РіР°Р»СЊРЅРѕС— РєР°Р»РѕСЂС–Р№РЅРѕСЃС‚С– РїСЂРѕРґСѓРєС‚Сѓ;
 {
-	float power = (first * second) / 100; //Через те, що first в грамах, то треба перевести в кілограми: 100г=0,1кг. Допустимо 100г=first, а second=zagalna.   
+	float power = (first * second) / 100; //Р§РµСЂРµР· С‚Рµ, С‰Рѕ first РІ РіСЂР°РјР°С…, С‚Рѕ С‚СЂРµР±Р° РїРµСЂРµРІРµСЃС‚Рё РІ РєС–Р»РѕРіСЂР°РјРё: 100Рі=0,1РєРі.   
 	cout << "Zagalna kaloriinist" << power << endl;
 }
 
-void Kaloriinist::Display() //виведення готових результатів згідно з разрахунку формули;
-{
+void Kaloriinist::Display() //РІРёРІРµРґРµРЅРЅСЏ РіРѕС‚РѕРІРёС… СЂРµР·СѓР»СЊС‚Р°С‚С–РІ Р·РіС–РґРЅРѕ Р· СЂР°Р·СЂР°С…СѓРЅРєСѓ С„РѕСЂРјСѓР»Рё;
 
 	Power();
 
